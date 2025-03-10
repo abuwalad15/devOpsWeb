@@ -9,12 +9,6 @@ pipeline {
             steps {
                 sh 'mvn clean install'
             }
-            post{
-                success{
-                    echo "Archiving the Artifacts"
-                    archiveArtifacts artifacts: '**/target/*.war'
-                }
-            }
         }
 
         stage('Deploy to tomcat server') {

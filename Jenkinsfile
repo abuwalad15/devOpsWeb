@@ -5,7 +5,7 @@ pipeline {
     }
 
     stages {
-        stage('Build') {
+        stage('Build war file') {
             steps {
                 sh 'mvn clean package'
             }
@@ -24,9 +24,9 @@ pipeline {
 			subject:"Job Completed",
 			body:"Jenkins pipeline job completed",
 			to:"maxwalad@gmail.com"
+			}
 		}
-		}
-
+	}
         
     }
 }

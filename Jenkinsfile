@@ -21,9 +21,9 @@ pipeline {
 	stage('Notif'){
 		steps{
 		emailtext{
-			subject:"Job Completed",
-			body:"Jenkins pipeline job completed",
-			to:"maxwalad@gmail.com"
+			subject: "Job Completed",
+			body: "Jenkins pipeline job completed",
+			to: "maxwalad@gmail.com"
 			}
 		}
 	}
